@@ -10,7 +10,7 @@ import yaml
 from item.common import paths
 from item.remote import OpenKAPSARC, get_sdmx
 
-from .scripts import T000, T001, T003, T009
+from .scripts import T000, T001, T002, T003, T009
 from .scripts.util.managers.dataframe import ColumnName
 
 log = logging.getLogger(__name__)
@@ -21,7 +21,7 @@ SCRIPTS = [
     # Converted to a submodule, below.
     # 'T000',
     # 'T001',
-    "T002",
+    # "T002",
     # "T003",
     "T004",
     "T005",
@@ -31,7 +31,7 @@ SCRIPTS = [
 ]
 
 #: Submodules usable with :func:`process`.
-MODULES = {0: T000, 1: T001, 3: T003, 9: T009}
+MODULES = {0: T000, 1: T001, 2: T002, 3: T003, 9: T009}
 
 #: Path for output from :func:`process`.
 OUTPUT_PATH = paths["data"] / "historical" / "output"
